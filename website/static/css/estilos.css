@@ -1,0 +1,30 @@
+.fundo {
+
+    background-size: cover;
+    background-position:top center;
+    height: 10%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: blue;
+
+}
+header{
+  background-size: cover;
+  background-position:top center;
+  height: 10%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: red;
+
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.cell-breakWord {
+   word-wrap: break-word;
+   line-height: 15pt;
+
+}
