@@ -3,6 +3,9 @@ from django.views.generic import TemplateView, ListView, UpdateView, CreateView,
 from helloworld.models import Produto
 from website.forms import InsereProdutoForm
 
+from django.http import HttpResponse
+from django.shortcuts import render
+
 
 # PÁGINA PRINCIPAL
 # ----------------------------------------------
@@ -49,3 +52,12 @@ class ProdutoDeleteView(DeleteView):
     fields = '__all__'
     context_object_name = 'produto'
     success_url = reverse_lazy("website:lista_produtos")
+
+#----------------------------------------------
+
+def pdf_view(request):
+    with open('website/files/texto1.pdf', 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=some_file.pdf'
+        return response
+    pdf.closed

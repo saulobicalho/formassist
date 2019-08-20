@@ -3,6 +3,10 @@ from website.views import IndexTemplateView, ProdutoListView, ProdutoUpdateView,
 
 from django.urls import path
 
+from .views import (
+    pdf_view
+)
+
 app_name = 'website'
 
 urlpatterns = [
@@ -20,4 +24,6 @@ urlpatterns = [
 
     # GET/POST /produtos/excluir/{pk}
     path('produto/excluir/<pk>', ProdutoDeleteView.as_view(), name="deleta_produto"),
+
+    path('texto',pdf_view, name="texto")
 ]
