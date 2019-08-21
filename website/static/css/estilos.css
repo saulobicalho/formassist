@@ -1,26 +1,16 @@
-.fundo {
-
-    background-size: cover;
-    background-position:top center;
-    height: 10%;
-    position: relative;
-    background-repeat: no-repeat;
-    background-color: blue;
-
-}
-header{
-  background-size: cover;
-  background-position:top center;
-  height: 10%;
-  position: relative;
-  background-repeat: no-repeat;
-  background-color: red;
-
+.credito{
+  font-size: small;
+  font-style: italic;
 }
 
-table {
+
+table{
    width: 100%;
    border-collapse: collapse;
+   border: 1px solid #BBB;
+}
+td,tr{
+  border: 1px solid #BBB;
 }
 
 .cell-breakWord {

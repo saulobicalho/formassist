@@ -1,50 +1,56 @@
 from django.db import models
+from django.conf import settings
 
+class Foo(models.Model):
+    audio = models.FilePathField(path="/website/arquivos")
 
 class Produto(models.Model):
 
 
-    questao_de_pesquisa = models.CharField(
+    questao_de_pesquisa = models.TextField(
+        max_length=255,
+        null=False,
+        blank=False,
+        help_text="(Que perguntas se quer responder com o método?)"
+    )
+
+    metodo = models.TextField(
+        max_length=255,
+        null=False,
+        blank=False,
+        help_text="(Nome dos métodos aplicados)"
+    )
+
+    aplicacao_metodo = models.TextField(
+        max_length=255,
+        null=False,
+        blank=False,
+        help_text="(Decisões relacionadas ao modo como o método foi aplicado)"
+    )
+
+    tipo_dado = models.TextField(
         max_length=255,
         null=False,
         blank=False
     )
 
-    metodo = models.CharField(
+    qtde_dado = models.TextField(
         max_length=255,
         null=False,
         blank=False
     )
 
-    aplicacao_metodo = models.CharField(
+    metodo_analise = models.TextField(
         max_length=255,
         null=False,
         blank=False
     )
-
-    tipo_dado = models.CharField(
+    natureza_resultado = models.TextField(
         max_length=255,
         null=False,
         blank=False
     )
-
-    qtde_dado = models.CharField(
-        max_length=255,
-        null=False,
-        blank=False
-    )
-
-    metodo_analise = models.CharField(
-        max_length=255,
-        null=False,
-        blank=False
-    )
-    natureza_resultado = models.CharField(
-        max_length=255,
-        null=False,
-        blank=False
-    )
-    dados_justifica = models.CharField(
+    dados_justifica = models.TextField(
         max_length=255,
         null=False,
         blank=False

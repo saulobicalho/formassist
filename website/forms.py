@@ -1,5 +1,22 @@
-from helloworld.models import Produto
+from helloworld.models import Produto, Foo
 from django import forms
+
+# FORMULÁRIO DE SELEÇÃO DE ARQUIVOS DE TEXTO
+# -------------------------------------------
+
+class SelecionaTexto(forms.ModelForm):
+
+
+    class Meta:
+        # Modelo base
+        model = Foo
+
+
+
+        # Campos que estarão no form
+        fields = [
+            'audio'
+        ]
 
 
 # FORMULÁRIO DE INCLUSÃO DE FUNCIONÁRIOS
@@ -7,16 +24,6 @@ from django import forms
 
 class InsereProdutoForm(forms.ModelForm):
 
-    chefe = forms.BooleanField(
-        label='Chefe?',
-        required=False,
-    )
-
-    biografia = forms.CharField(
-        label='Biografia',
-        required=False,
-        widget=forms.Textarea
-    )
 
     class Meta:
         # Modelo base

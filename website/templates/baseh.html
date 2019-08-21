@@ -16,6 +16,7 @@
     <title>{% block head_title %} CFE {% endblock %}</title>
   </head>
   <body>
+    
     <div class="container">
     <div class="row">
         {% if device.is_xsmall or device.is_small %}
@@ -37,7 +38,7 @@
                 <!-- <img src="images/myimage_sm.jpg" alt="Descriptive alt tag" /> -->
             </div>
         {% endif %}
-        <p>Crédito da imagem: https://all-free-download.com/free-vectors/</p>
+        <p class="credito">Crédito da imagem: https://all-free-download.com/free-vectors/</p>
     </div>
 </div>
       {% if device.is_xsmall or device.is_small %}
