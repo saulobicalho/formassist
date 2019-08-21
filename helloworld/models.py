@@ -1,8 +1,4 @@
 from django.db import models
-from django.conf import settings
-
-class Foo(models.Model):
-    audio = models.FilePathField(path="/website/arquivos")
 
 class Produto(models.Model):
 

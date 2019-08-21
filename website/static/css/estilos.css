@@ -13,6 +13,10 @@ td,tr{
   border: 1px solid #BBB;
 }
 
+.tdbotoes{
+  border: none;
+}
+
 .cell-breakWord {
    word-wrap: break-word;
    line-height: 15pt;

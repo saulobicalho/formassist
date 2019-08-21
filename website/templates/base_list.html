@@ -63,9 +63,8 @@
                       <td style="width:10%"><b>Justificativa dos dados</b></td>
                       <td class="cell-breakWord">{{ dados_justifica }}</td>
                   </tr><tr>
-                      <td><a href="{% url 'website:atualiza_produto' pk=produto.id %}">Atualizar</a></td>
-                  </tr><tr>
-                      <td><a href="{% url 'website:deleta_produto' pk=produto.id %}">Excluir</a></td>
+                      <td class="tdbotoes"><a href="{% url 'website:atualiza_produto' pk=produto.id %}">Atualizar</a></td>
+                      <td class="tdbotoes"><a href="{% url 'website:deleta_produto' pk=produto.id %}">Excluir</a></td>
                   </tr>
               {% endfor %}
           </tbody>

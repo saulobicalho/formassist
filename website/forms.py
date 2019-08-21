@@ -1,23 +1,5 @@
-from helloworld.models import Produto, Foo
+from helloworld.models import Produto
 from django import forms
-
-# FORMULÁRIO DE SELEÇÃO DE ARQUIVOS DE TEXTO
-# -------------------------------------------
-
-class SelecionaTexto(forms.ModelForm):
-
-
-    class Meta:
-        # Modelo base
-        model = Foo
-
-
-
-        # Campos que estarão no form
-        fields = [
-            'audio'
-        ]
-
 
 # FORMULÁRIO DE INCLUSÃO DE FUNCIONÁRIOS
 # -------------------------------------------
