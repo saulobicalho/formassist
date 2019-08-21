@@ -8,6 +8,7 @@
     {% load static %}
       <link rel="stylesheet" href="{% static "css/estilos.css" %}">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,6 +16,9 @@
     <title>{% block head_title %} CFE {% endblock %}</title>
   </head>
   <body>
+    {% block image_bkg %}
+    {% endblock %}
+
     <div class="container">
       <div class="row">
           <div class='col-6 mx-auto'>
@@ -22,25 +26,17 @@
           </div>
       </div>
       <ul>
-        <li><a href="{% url 'website:index' %}">Página Inicial</a></li>
-        <li><a href="{% url 'website:cadastra_produto' %}">Preencher Formulário</a></li>
-        <li><a href="{% url 'website:lista_produtos' %}">Exibir respostas</a></li>
-        <li><a href="{% url 'website:texto' %}">Ler o texto</a></li>
+          <li><a href="{% url 'website:index' %}">Página Inicial</a></li>
+          <li><a href="{% url 'website:cadastra_produto' %}">Preencher Formulário</a></li>
+          <li><a href="{% url 'website:lista_produtos' %}">Exibir respostas</a></li>
+          <li><a href="{% url 'website:texto' %}">Ler o texto</a></li>
       </ul>
-      <div class="row">
-          <div class='col-6 mx-auto'>
-        <form method="post">
-            <!-- É necessário colocar o código abaixo em toda página que                   -->
-            <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
-            {% csrf_token %}
-
-            {{ form }}
-
-            <button>Enviar</button>
-        </form>
-      </div>
-    </div>
   </div>
+  {% block formulary %}
+  {% endblock %}
+
+  {% block list %}
+  {% endblock %}
 
   </body>
 </html>

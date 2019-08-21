@@ -1,7 +1,26 @@
-{% extends "base_d.html" %}
+{% extends "base.html" %}
 
 {% block head_title %}
 Deleção de formulário
 {% endblock %}
 
 {% block title %} Deletando...{% endblock %}
+
+{% block formulary %}
+<div class="row">
+  <div class='col-6 mx-auto'>
+    <form method="post">
+      <!-- É necessário colocar o código abaixo em toda página que                   -->
+      <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
+      {% csrf_token %}
+
+      Você tem certeza que quer excluir o formulário <b>{{ produto.nome }}</b>? <br><br>
+
+      <button type="button">
+          <a href="{% url 'website:lista_produtos' %}">Cancelar</a>
+      </button>
+      <button>Excluir</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

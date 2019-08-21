@@ -1,7 +1,23 @@
-{% extends "base_cu.html" %}
+{% extends "base.html" %}
 
 {% block head_title %}
 Preenchimento de Formulário
 {% endblock %}
 
 {% block title %} Criando formulário...{% endblock %}
+
+{% block formulary %}
+  <div class="row">
+    <div class='col-6 mx-auto'>
+      <form method="post">
+        <!-- É necessário colocar o código abaixo em toda página que                   -->
+        <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
+        {% csrf_token %}
+
+        {{ form }}
+
+        <button>Enviar</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,7 +1,52 @@
-{% extends "base_list.html" %}
+{% extends "base.html" %}
 
 {% block head_title %}
 Exibir Formulário
 {% endblock %}
 
 {% block title %} Listagem de respostas{% endblock %}
+
+{% block list %}
+  <div style="max-width: 50%;">
+      <table>
+          <thead>
+              <tr style="border-bottom: 1px solid #AAA">
+                  <td style="width:10%"><b>Respostas</b></td>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% for produto in produtos %}
+                  <tr>
+                      <td style="width:10%"><b>Questão de Pesquisa</b></td>
+                      <td class="cell-breakWord">{{ produto.questao_de_pesquisa }}</td>
+                  </tr><tr>
+                    <td style="width:10%"><b>Método</b></td>
+                      <td class="cell-breakWord">{{ produto.metodo }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Aplicação do Método</b></td>
+                      <td class="cell-breakWord">{{ produto.aplicacao_metodo }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Tipo do dado</b></td>
+                      <td class="cell-breakWord">{{ produto.tipo_dado }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Quantidade do dado</b></td>
+                      <td class="cell-breakWord">{{ produto.qtde_dado }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Método de Análise</b></td>
+                      <td class="cell-breakWord">{{ produto.metodo_analise }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Natureza do Resultado</b></td>
+                      <td class="cell-breakWord">{{ natureza_resultado }}</td>
+                  </tr><tr>
+                      <td style="width:10%"><b>Justificativa dos dados</b></td>
+                      <td class="cell-breakWord">{{ dados_justifica }}</td>
+                  </tr><tr>
+                      <td class="tdbotoes"><a href="{% url 'website:atualiza_produto' pk=produto.id %}">Atualizar</a></td>
+                      <td class="tdbotoes"><a href="{% url 'website:deleta_produto' pk=produto.id %}">Excluir</a></td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </div>
+{% endblock %}

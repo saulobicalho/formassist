@@ -1,7 +1,36 @@
-{% extends "baseh.html" %}
+{% extends "base.html" %}
+{% load staticfiles %}
 
 {% block head_title %}
 Página Inicial
 {% endblock %}
 
 {% block title %} Welcome! {% endblock %}
+
+{% block image_bkg %}
+  <div class="container">
+    <div class="row">
+
+      {% if device.is_xsmall or device.is_small %}
+        <div class="col-sm">
+          {# Rendered for x-small/small screen devices #}
+          <img src="{% static "img/bkg_sm.jpg" %}" alt="Estudo">
+        </div>
+
+      {% elif device.is_medium %}
+        <div class="col-md">
+          {# Rendered for medium screen devices #}
+          <img src="{% static "img/bkg_md.jpg" %}" alt="Estudo">
+        </div>
+
+      {% else %}
+        <div class="col-lg">
+          {# Rendered for large/xlarge screen devices #}
+          <img src="{% static "img/bkg.jpg" %}" alt="Estudo">
+        </div>
+      {% endif %}
+
+      <p class="credito">Crédito da imagem: https://all-free-download.com/free-vectors/</p>
+    </div>
+  </div>
+{% endblock %}
