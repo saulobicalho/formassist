@@ -1,3 +1,94 @@
+<h4>Artigo lido:</h4>
+<p><i>Jeff Hemsley and Sikana Tanupabrungsun. 2018. Viral Design: User Concepts
+Df Virality Dn the Niche Sdcial Media Site, Dribbble. In Proceedings of the 9th
+International Conference on Social Media and Society (SMSociety '18). ACM, New
+York, NY, USA, 91-101.
+</i></p>
+
+<h4>• Qual o objetivo do artigo?</h4>
+
+<p>O objetivo central deste artigo foi o de investigar se existem fenômenos
+  virais e, em caso positivo, o que é o conteúdo e quais fatores mais
+  influenciam nos mesmos. O objetivo foi investigar tais fenômenos em redes
+  específicas de nicho social. Também se pretende saber como, no caso da
+  ocorrência, o que está sendo difundido.
+</p>
+
+<h4>• Descrição do método ou análise quantitativa e qualitativa apresentada</h4>
+ <table>
+   <tr>
+     <td><b>Conceito</b></td>
+     <td><b>Qualitativa</b></td>
+     <td><b>Quantitativa</b></td>
+   </tr>
+    <td><b>Questão de pesquisa específica</b></td>
+    <td></td>
+    <td></td>
+  <tr>
+    <td><b>Que método(s) foi(foram) aplicado(s)?</b></td>
+    <td>Abordagem mista a partir de perspectiva centrada no usuário
+      (Entrevista).<br>O método misto utilizado é sequencial e exploratório.</td>
+    <td>Modelagem de regressão linear a partir de variáveis independentes
+      pré-definidas.</td>
+  </tr>
+  <tr>
+    <td><b>O que apresentam sobre a aplicação do método</b></td>
+    <td>Foram selecionados usuários da plataforma que disponibilizaram seu
+      contato no perfil, e falantes da língua inglesa. </td>
+    <td>Coleta e análise de dados de uso do sistema, a partir da API pública do
+      Dribbble, realizando a modelagem de uma regressão linear com tais dados.
+      De todos os dados, extraíram um número de 100 players, com um determinado
+      número mínimo de posts</td>
+  </tr>
+  <tr>
+    <td><b>Tipo de dado coletado</b></td>
+    <td>Coleta via gravação de áudio-chamada, que foram posteriormente
+      transcritas e os participantes anonimizados.</td>
+    <td>Dados e metadados associados aos mesmos, coletados a partir de perfis e
+      imagens artísticas dos usuários, através da API pública do Dribbble.</td>
+  </tr>
+  <tr>
+    <td><b>Quantidade de dados ou participantes considerados</b></td>
+    <td>Dados da entrevista de 28 informantes, sendo 19 homens e 9 mulheres, e a
+      maioria com mais de 3 anos de uso da plataforma.</td>
+    <td>Dados e metadados associados a cerca de 400.000 perfis de usuário e
+      700.000 imagens artísticas disponibilizadas sobre a plataforma Dribbble. Do total de perfis, cerca de 50.000 continham informações acerca de sua localização específica. Ao final, foram analisados cerca de 8.318 após filtragem.</td>
+  </tr>
+  <tr>
+    <td><b>Método(s) usado(s) na análise</b></td>
+    <td>Transcrição e análise do material das entrevistas.</td>
+    <td>A partir da identificação dos fatores relacionados aos eventos virais, pela entrevista dos informantes, foi possível traçar variáveis a serem usadas em um modelo de regressão.</td>
+  </tr>
+  <tr>
+    <td><b>Natureza dos Resultados</b></td>
+    <td>O resultado das entrevistas permitiu a delimitação dos critérios ou fatores determinantes para que se perceba a ocorrência da viralidade, e para sua representação, os quais foram utilizados na etapa posterior como variáveis para a modelagem da regressão linear.</td>
+    <td>Avaliação das variáveis independentes (seguidores, visualizações, curtidas e comentários, etiquetas, buckets, idade) a partir de Variance Inflation Factor (VIF).  Através da regressão linear foi possível estimar coeficientes para cada dessas variáveis. O resultado dos coeficientes possibilitou a construção de gráficos comparativos entre os mesmos.</td>
+  </tr>
+  <tr>
+    <td><b>Que dados apresentam para justificar suas conclusões</b></td>
+    <td>Trechos das entrevistas</td>
+    <td>Tabelas com métricas e estatísticas.</td>
+  </tr>
+ </table>
+
+<h4>Combinação dos métodos</h4>
+<p><i>o Como foram combinados os métodos (e.g. Geraram dados complementares? Um deu uma visão geral, e outro aprofundou algum resultado gerado pelo outro?, etc)</i></p>
+<p>A combinação dos métodos se deu de forma que o resultado de um deles foi usado como o input do outro. No caso, o método qualitativo permitiu uma visão geral, e o quantitativo permitiu uma investigação profunda no tema.</p>
+<p><i>o Que benefícios foram alcançados por se combinar os métodos quantitativos e qualitativos no
+artigo?</i></p>
+<p>Os benefícios considerados pela combinação dos métodos é a possibilidade de verificar os resultados de um deles, a partir do outro. No caso, os resultados do método quantitativo permitiram apontar respostas para as hipóteses, as quais por sua vez foram levantadas a partir dos resultados da análise qualitativa.</p>
+<h4>Resultados</h4>
+<p><i>o Quais os principais resultados obtidos com métodos quantitativos?</i></p>
+<p>Verificação se as hipóteses faziam sentido e estavam relacionadas com os eventos da viralidade, o que se comprovou estatisiticamente.</p>
+<p><i>o Quais os principais resultados obtidos com métodos qualitativos?</i></p>
+<p><i>o Qual a contribuição do artigo para a comunidade?</i></p>
+<p>A contribuição para a comunidade é a exploração de um tema pouco explorado em pesquisas anteriores, que é a ocorrência dos eventos de viralidade em redes sociais de nicho específico.</p>
+<h4>Comentário do grupo</h4>
+<p><i>– O que acharam sobre a combinação de métodos?</i></p>
+<p>Achamos que a combinação foi benéfica para os própósitos do estudo, tendo sido bem integrados.</p>
+<p><br><br>Obs: Não houveram maiores dúvidas ou comentários adicionais.</p>
+
+
 {% extends "base.html" %}
 {% load staticfiles %}
 
