@@ -1,0 +1,72 @@
+modularidade: 28-8-19
+revisão p1:
+
+tem classe que só tem rotinas, sem tipos definidos.
+Uma classe interna, definida dentro de outra.
+Várias classes podem usar uma mesma ed, mas tenho que po-las junto.
+classe:
+1met,ed
+2só métodos
+3só ed
+
+problema:
+1
+2 classe c metodos q sao usados por outras classes, ruim pois gera acoplamento
+3 classe que implementa varias ed, deveriam ser classes distintas
+
+TAD: tipo definido por nós (projetista), oferece certos serviços. Mais que encapsulado, deve
+ser escondido (especificador privado)
+
+top-down (prog. estruturada, tal como arvore). Raiz: f principal.
+ex: f: fazer compilador.
+inicio: o q é compilador.
+depois: subf. (ainda na especificação)
+depois: analise lexica (fazer tokens), sintatica (ler tokens),semantica(verificar
+se tipos corretos), geração de código intermediário.
+na OO n é bom top-down, fazer bottom-up (das folhas à raiz)
+na top-down pensa nas f, nao nos objetos. Na bottom-up, pensa nesses objetos.
+
+analise\especificação, projeto(+importante, pois diminui gap semantico, e o gap
+é no projeto, daí a escolha da lp), implementação
+
+abstração de expressão é a função
+abstração de comando é o procedimento
+
+***
+Estrutura geral de sistema oo
+camadas - acervos - biblioteca (se a biblioteca pode ter varios modulos, apenas
+um deles pode ser publico)- modulo (menor unid. compilavel separadamente, ex:
+classe.)- classes (é o mesmo q o modulo)
+
+conceito de modulo
+modulo n é exclusividade de oo, cada um de um jeito
+modularidade é chave p desenvolvimento de arquitetura flexivel
+modularidade para atingir extensibilidade e reusabilidade
+oo para mdulos mais flexiveis
+modulos para implementar abstra~çoes
+
+elemento basico da construção do modulo é a abstração
+tipo x ed
+o tipo a gente define, a ed já vem predefinida
+tad x tad parametrizado (neste vc passa por parametro qq um dos tipos existentes
+na implementação)
+
+principios p garantir modularidade
+1 unidade linguistica (o tipo de cada abstração deve ser um tipo definido no
+modulo)
+exp - abstração - f
+comando - procedimento
+declaração var - abstração de dados
+definições de tipo - TAD
+definições de tipo parametrizados - tipos parametrizados
+
+suporte linguistico favorece manutenibilidade
+
+2 baixa conectividade (deve ser comunicação minima, de um modulo com outros)
+
+
+
+
+3
+4
+5
