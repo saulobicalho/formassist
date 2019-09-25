@@ -1,0 +1,12 @@
+1
+tudo o q o designer quis dizer sobre quem é o usuario, que é o sistema, etc
+2
+3dinamicos
+redimensionamentos provocados por cliques, etc
+ver o que é importante na ação especifica do usuário (ex: se quero cadastrar receita é importante pra mim ver se a mesma existe, etc...)
+quais coisas mudam quando performa aplicação
+quais comportamentos das coisas quando interajo com elas?
+quais reconfigurações dinamicas ocorrem a partir da interação?
+quando um recurso é carregado inicialmente, quais suas cores (padrão), seu estado padrão?
+quais mudanças de estado ocorrem, como isso reflete na visualidade?
+quais recursos se alteram com o evento de sobreposição do mouse?
